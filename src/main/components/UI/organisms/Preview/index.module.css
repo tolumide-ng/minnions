@@ -1,0 +1,49 @@
+.preview {
+    --app-padding: 0.5rem;
+    --prev-w: 20rem;
+    ---prev-h: calc(min(30rem, 100%)); /*100% should be updated to the user selected height of the meme */
+    height: var(---prev-h);
+    width: var(--prev-w);
+    border: 2px dashed var(--color-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--app-padding);
+}
+
+.prevUpload {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.prevLabel {
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.prevInput {
+    display: none;
+}
+
+.prevButton {
+    margin-top: 3rem;
+    width: 100%;
+    padding: var(--app-padding);
+    background-color: var(--color-scorpion);
+    color: var(--color-white);
+    font-size: 1rem;
+    cursor: pointer;
+    width: calc(max(8rem, 55%));
+    border: none;
+}
+
+.prevButton:active {
+    transform: scale(0.97);
+    transition: transform 60ms ease-in-out;
+}
+
+.prevImage {
+    /* display: none; */
+}

@@ -1,10 +1,13 @@
 import * as React from "react";
-import "./index.css";
+import { Preview } from "../../UI/organisms/Preview";
+import styles from "./index.module.css";
 
 export const LandingPage = () => {
     return (
-        <article className="ldpg">
-            <article className="ldpg-cont"></article>
+        <article className={styles.ldpg}>
+            <article className={styles.ldpgCont}>
+                <Preview />
+            </article>
         </article>
     );
 };
