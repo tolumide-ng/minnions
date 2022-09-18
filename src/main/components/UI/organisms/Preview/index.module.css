@@ -4,11 +4,14 @@
     ---prev-h: calc(min(30rem, 100%)); /*100% should be updated to the user selected height of the meme */
     height: var(---prev-h);
     width: var(--prev-w);
+    max-height: var(---prev-h);
+    max-width: var(--prev-w);
     border: 2px dashed var(--color-black);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: var(--app-padding);
+    position: relative;
 }
 
 .prevUpload {
@@ -16,6 +19,7 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
+    z-index: 200;
 }
 
 .prevLabel {
@@ -44,6 +48,20 @@
     transition: transform 60ms ease-in-out;
 }
 
+.prevFig {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 .prevImage {
     /* display: none; */
+    max-height: var(---prev-h);
+    max-width: var(--prev-w);
+    object-fit: contain;
 }
